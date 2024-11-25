@@ -13,6 +13,19 @@ namespace SegundoParcialRombo.Datos
         {
             return rombos!.Count;
         }
-
+        public bool Existe(Rombo rombo)
+        {
+            return rombos!.Any(r=>r.DiagonalMayor==rombo.DiagonalMayor && 
+                    r.DiagonalMenor==rombo.DiagonalMenor && 
+                    r.Contorno==rombo.Contorno);
+        }
+        public void Agregar(Rombo rombo)
+        {
+            rombos!.Add(rombo);
+        }
+        public List<Rombo> GetRombos()
+        {
+            return rombos;
+        }
     }
 }
