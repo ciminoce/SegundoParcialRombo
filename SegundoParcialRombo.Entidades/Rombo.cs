@@ -6,10 +6,12 @@ namespace SegundoParcialRombo.Entidades
         public int DiagonalMayor { get; set; }
         public int DiagonalMenor { get; set; }
         public double Lado { get; set; }
-        public Rombo(int dM,int dm)
+        public Contorno Contorno { get; set; }
+        public Rombo(int dM,int dm, Contorno contorno)
         {
             DiagonalMayor = dM;
             DiagonalMenor = dm;
+            Contorno=contorno;
             Lado = CalcularLado();
         }
 
