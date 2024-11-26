@@ -88,6 +88,7 @@
             tsbBorrar.Size = new Size(52, 67);
             tsbBorrar.Text = "Borrar";
             tsbBorrar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbBorrar.Click += tsbBorrar_Click;
             // 
             // tsbEditar
             // 
@@ -130,13 +131,14 @@
             bordeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tsCboContornos });
             bordeToolStripMenuItem.Image = Properties.Resources.filled_filter_48px;
             bordeToolStripMenuItem.Name = "bordeToolStripMenuItem";
-            bordeToolStripMenuItem.Size = new Size(125, 22);
+            bordeToolStripMenuItem.Size = new Size(180, 22);
             bordeToolStripMenuItem.Text = "Contorno";
             // 
             // tsCboContornos
             // 
             tsCboContornos.Name = "tsCboContornos";
             tsCboContornos.Size = new Size(121, 23);
+            tsCboContornos.SelectedIndexChanged += tsCboContornos_SelectedIndexChanged;
             // 
             // tsbOrdenar
             // 
@@ -154,12 +156,14 @@
             lado09ToolStripMenuItem.Name = "lado09ToolStripMenuItem";
             lado09ToolStripMenuItem.Size = new Size(128, 22);
             lado09ToolStripMenuItem.Text = "Lado (0-9)";
+            lado09ToolStripMenuItem.Click += lado09ToolStripMenuItem_Click;
             // 
             // lado90ToolStripMenuItem
             // 
             lado90ToolStripMenuItem.Name = "lado90ToolStripMenuItem";
             lado90ToolStripMenuItem.Size = new Size(128, 22);
             lado90ToolStripMenuItem.Text = "Lado (9-0)";
+            lado90ToolStripMenuItem.Click += lado90ToolStripMenuItem_Click;
             // 
             // tsbActualizar
             // 
@@ -170,6 +174,7 @@
             tsbActualizar.Size = new Size(63, 67);
             tsbActualizar.Text = "Actualizar";
             tsbActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbActualizar.Click += tsbActualizar_Click;
             // 
             // toolStripSeparator2
             // 
@@ -185,6 +190,7 @@
             tsbSalir.Size = new Size(52, 67);
             tsbSalir.Text = "Salir";
             tsbSalir.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbSalir.Click += tsbSalir_Click;
             // 
             // panelCantidad
             // 
