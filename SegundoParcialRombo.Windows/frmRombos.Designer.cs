@@ -34,6 +34,7 @@
             tsbBorrar = new ToolStripButton();
             tsbEditar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
+            tsbBuscar = new ToolStripButton();
             tsbFiltrar = new ToolStripDropDownButton();
             bordeToolStripMenuItem = new ToolStripMenuItem();
             tsCboContornos = new ToolStripComboBox();
@@ -47,7 +48,6 @@
             txtCantidad = new TextBox();
             label1 = new Label();
             dgvDatos = new DataGridView();
-            tsbBuscar = new ToolStripButton();
             colMayor = new DataGridViewTextBoxColumn();
             colMenor = new DataGridViewTextBoxColumn();
             colBorde = new DataGridViewTextBoxColumn();
@@ -77,6 +77,7 @@
             tsbNuevo.Size = new Size(52, 67);
             tsbNuevo.Text = "Nuevo";
             tsbNuevo.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbNuevo.Click += tsbNuevo_Click;
             // 
             // tsbBorrar
             // 
@@ -103,6 +104,16 @@
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 70);
             // 
+            // tsbBuscar
+            // 
+            tsbBuscar.Image = Properties.Resources.search_48px1;
+            tsbBuscar.ImageScaling = ToolStripItemImageScaling.None;
+            tsbBuscar.ImageTransparentColor = Color.Magenta;
+            tsbBuscar.Name = "tsbBuscar";
+            tsbBuscar.Size = new Size(52, 67);
+            tsbBuscar.Text = "Buscar";
+            tsbBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
             // tsbFiltrar
             // 
             tsbFiltrar.DropDownItems.AddRange(new ToolStripItem[] { bordeToolStripMenuItem });
@@ -119,7 +130,7 @@
             bordeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tsCboContornos });
             bordeToolStripMenuItem.Image = Properties.Resources.filled_filter_48px;
             bordeToolStripMenuItem.Name = "bordeToolStripMenuItem";
-            bordeToolStripMenuItem.Size = new Size(180, 22);
+            bordeToolStripMenuItem.Size = new Size(125, 22);
             bordeToolStripMenuItem.Text = "Contorno";
             // 
             // tsCboContornos
@@ -141,13 +152,13 @@
             // lado09ToolStripMenuItem
             // 
             lado09ToolStripMenuItem.Name = "lado09ToolStripMenuItem";
-            lado09ToolStripMenuItem.Size = new Size(180, 22);
+            lado09ToolStripMenuItem.Size = new Size(128, 22);
             lado09ToolStripMenuItem.Text = "Lado (0-9)";
             // 
             // lado90ToolStripMenuItem
             // 
             lado90ToolStripMenuItem.Name = "lado90ToolStripMenuItem";
-            lado90ToolStripMenuItem.Size = new Size(180, 22);
+            lado90ToolStripMenuItem.Size = new Size(128, 22);
             lado90ToolStripMenuItem.Text = "Lado (9-0)";
             // 
             // tsbActualizar
@@ -220,16 +231,6 @@
             dgvDatos.Size = new Size(767, 307);
             dgvDatos.TabIndex = 2;
             // 
-            // tsbBuscar
-            // 
-            tsbBuscar.Image = Properties.Resources.search_48px1;
-            tsbBuscar.ImageScaling = ToolStripItemImageScaling.None;
-            tsbBuscar.ImageTransparentColor = Color.Magenta;
-            tsbBuscar.Name = "tsbBuscar";
-            tsbBuscar.Size = new Size(52, 67);
-            tsbBuscar.Text = "Buscar";
-            tsbBuscar.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
             // colMayor
             // 
             colMayor.HeaderText = "Diag. Mayor";
@@ -280,6 +281,7 @@
             Name = "frmRombos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Listado de Rombos";
+            Load += frmRombos_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             panelCantidad.ResumeLayout(false);
